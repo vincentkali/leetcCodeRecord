@@ -14,7 +14,7 @@
 
 以下是我列举的经典题目（带 91 字样的表示出自 **91 天学算法**活动）：
 
-- [面试题 17.12. BiNode](./problems/binode-lcci.md) 👍
+- [面试题 17.12. BiNode](azl397985856/leetcode/problems/binode-lcci.md) 👍
 - [0001. 两数之和](./problems/1.two-sum.md)
 - [0020. 有效的括号](./problems/20.valid-parentheses.md)
 - [0021. 合并两个有序链表](./problems/21.merge-two-sorted-lists.md)
