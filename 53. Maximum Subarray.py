@@ -1,5 +1,6 @@
 # [-2,1,-3,4,-1,2,1,-5,4]
 # [-2,-1]
+from functools import cache
 class Solution:
     def maxSubArray(self, nums: list[int]) -> int:
         if len(nums) == 0:
@@ -22,7 +23,18 @@ class Solution:
         
         return max_
 
-TC = [-10000] * 10000
+class Solution:
+    def maxSubArray(self, nums: list[int]) -> int:
+        len_ = len(nums)
+        @cache
+        def solve(i, must_pick):
+            print(i, must_pick)
+            if i >= len_: return 0 if must_pick else -100000000
+            return max(nums[i] + solve(i+1, True), 0 if must_pick else solve(i+1, False))
+        return solve(0, False)
+
+
+TC = [5,4,-1,7,8]
 S = Solution()
 result = S.maxSubArray(TC)
 print(result)
